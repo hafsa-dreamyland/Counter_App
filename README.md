@@ -4,14 +4,14 @@
 Counter App is a simple web application that allows users to increment, decrement, and reset a counter. It is developed using HTML, CSS, and JavaScript and is designed to be easily usable and customizable.
 
 ## Features
-- Increment Counter: By pressing the "Increase" button, you will increase the counter value by 1.
-- Decrement Counter: By pressing the "Decrease" button, you will decrease the counter value by 1.
-- Reset Counter: By pressing the "Reset" button, you will reset the counter value to 0.
+- Increment Counter: by pressing the "Increase" button, you will increase the counter value by 1.
+- Decrement Counter: by pressing the "Decrease" button, you will decrease the counter value by 1.
+- Reset Counter: by pressing the "Reset" button, you will reset the counter value to 0.
 
 ## Technologies Used
-- HTML: Used for the structure and content of the application.
-- CSS: Used for styling and layout of the application.
-- JavaScript: Used for adding interactivity and dynamic functionality to the application.
+- HTML: used for the structure and content of the application.
+- CSS: used for styling and layout of the application.
+- JavaScript: used for adding interactivity and dynamic functionality to the application.
 
 ## Usage Instructions
 1. Clone this repository to your computer.
