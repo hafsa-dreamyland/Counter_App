@@ -1,42 +1,30 @@
-const counter = document.querySelector("#counter");
-const btns = document.querySelectorAll(".btn");
+// Declaration of variables for DOM elements
+const counter = document.getElementById("counter");
+const plusBtn = document.querySelector(".increase");
+const minusBtn = document.querySelector(".decrease");
+const resetBtn = document.querySelector(".reset");
 
 let count = 0;
 
-btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const styles = e.currentTarget.classList;
+// Adding event listeners to DOM elements
+plusBtn.addEventListener("click", () => changeCounter(1));
+minusBtn.addEventListener("click", () => changeCounter(-1));
+resetBtn.addEventListener("click", resetCounter);
 
-    if (styles.contains("increase")) {
-      count++;
-      counter.classList.add("up");
+// Function to increment or decrement the counter
+function changeCounter(value) {
+  count += value;
+  updateCounterDisplay();
+}
 
-      setTimeout(() => {
-        counter.classList.remove("up");
-      }, 500);
-    } else if (styles.contains("decrease")) {
-      count--;
-      counter.classList.add("down");
+// Function to reset the counter to zero
+function resetCounter() {
+  count = 0;
+  updateCounterDisplay();
+}
 
-      setTimeout(() => {
-        counter.classList.remove("down");
-      }, 500);
-    } else {
-      count = 0;
-    }
-
-    if (count > 0) {
-      counter.style.color = "green";
-    }
-
-    if (count < 0) {
-      counter.style.color = "red";
-    }
-
-    if (count === 0) {
-      counter.style.color = "grey";
-    }
-
-    counter.textContent = count;
-  });
-});
+// Function to update the counter display
+function updateCounterDisplay() {
+  counter.textContent = count;
+  counter.style.color = count > 0 ? "green" : count < 0 ? "red" : "grey";
+}
